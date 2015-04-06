@@ -26,9 +26,9 @@ using `gunicorn -k eventlet app:app`.
 
 ## URLs
 
-`/` - home for frontend (TODO).
+`GET /` - home for frontend (TODO).
 
-`/api/statuses/` - list endpoint for status objects (supports filtering via `message`, `since` and `until`).
+`GET /api/statuses/` - list endpoint for status objects (supports filtering via `message`, `since` and `until`).
 
 Example:
 
@@ -54,7 +54,10 @@ Example:
 }
 ```
 
-`/api/timeseries/` - data endpoint for building timeseries graphs on top of the data (supports same filters
+`POST /api/statuses/ - adds a new status; needs content-type json and `{"message": $msg}`, with `$msg` one of
+`"stressed"` and `"frustrated"`.
+
+`GET /api/timeseries/` - data endpoint for building timeseries graphs on top of the data (supports same filters
 as `statuses/` and, in addition, a `resolution` - `day`, `hour`, `minute` or `second` - defaulting to `day`).
 
 Example:
