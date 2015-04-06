@@ -54,7 +54,7 @@ Example:
 }
 ```
 
-`POST /api/statuses/ - adds a new status; needs content-type json and `{"message": $msg}`, with `$msg` one of
+`POST /api/statuses/` - adds a new status; needs content-type json and `{"message": $msg}`, with `$msg` one of
 `"stressed"` and `"frustrated"`.
 
 `GET /api/timeseries/` - data endpoint for building timeseries graphs on top of the data (supports same filters
