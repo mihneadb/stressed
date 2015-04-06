@@ -16,7 +16,14 @@ Data is stored in an sqlite db. It looks like this:
 
 ### Docker
 
-You can simply fire it up using `docker build -t stressed` and `docker run -t stressed`.
+You can simply fire it up using:
+
+```bash
+docker build -t stressed .
+docker run -v `pwd`:/opt/stressed -p 5000:80 -it stressed
+```
+
+The server will be available on `127.0.0.1:5000`.
 
 ### Local install
 
