@@ -1,0 +1,22 @@
+.navigation {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+
+  li {
+    list-style: none;
+    margin-bottom: 20px;
+
+    a {
+      font-size: 32px;
+      color: @primary-black;
+      opacity: 0.1;
+      transition: .3s opacity ease;
+
+      &:hover,
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
