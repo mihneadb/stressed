@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from sqlalchemy import desc
 from sqlalchemy.orm import sessionmaker
 from werkzeug.exceptions import BadRequest
@@ -87,5 +87,19 @@ def api_statuses_post_list():
     return jsonify(status.serialize())
 
 
+#####
+# For dev purposes.
+#####
+@app.route('/')
+def serve_index_static():
+    return send_from_directory('static', 'index.html')
+
+
+@app.route('/<path:path>')
+def serve_static(path):
+    return send_from_directory('static', path)
+
+
 if __name__ == '__main__':
     app.run(use_reloader=True)
+
