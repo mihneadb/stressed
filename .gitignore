@@ -7,3 +7,4 @@ data.db
 Icon
 node_modules/
 build/
+*.pyc
