@@ -23,7 +23,7 @@ module.exports = {
     loaders: [{
       test: /\.js?$/,
       exclude: /node_modules/,
-      loaders: ["react-hot", "babel-loader"]
+      loaders: ["babel-loader"]
     }, {
       test: /\.(json(\?.*)?)$/,
       loaders: ["json-loader"]

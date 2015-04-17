@@ -1,14 +1,13 @@
 {
-  "name": "react-hot-boilerplate",
-  "version": "1.0.0",
-  "description": "Boilerplate for ReactJS project with hot code reloading",
+  "name": "StressedApp",
+  "version": "0.0.1",
+  "description": "For stressed people",
   "scripts": {
     "watch": "webpack --config webpack.config.js --watch",
     "build": "webpack --config webpack.config.js --progress --profile --colors"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/gaearon/react-hot-boilerplate.git"
+    "type": "git"
   },
   "keywords": [
     "react",
@@ -22,16 +21,14 @@
     "edit",
     "webpack"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "XXX",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
-  },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+  "homepage": "http://stressed-app.herokuapp.com/",
   "devDependencies": {
     "babel-core": "^4.7.4",
     "babel-loader": "^4.1.0",
     "bluebird": "^2.9.24",
+    "css-loader": "^0.10.1",
     "es6-promise": "^2.0.1",
     "extract-text-webpack-plugin": "^0.5.0",
     "fetch": "^0.3.6",
@@ -41,11 +38,14 @@
     "json-loader": "^0.5.1",
     "json5": "^0.4.0",
     "json5-loader": "^0.6.0",
+    "less": "^2.5.0",
+    "less-loader": "^2.2.0",
     "lodash": "^3.6.0",
     "moment": "^2.10.2",
     "node-fetch": "^1.0.6",
     "npm": "^2.7.6",
     "react-fa": "^3.2.0",
+    "style-loader": "^0.10.2",
     "url-loader": "^0.5.5",
     "webpack": "^1.8.4"
   },
