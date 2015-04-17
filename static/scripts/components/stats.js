@@ -22,14 +22,12 @@ let Stats = React.createClass({
   componentWillMount() {
     fetch(window.TIMESERIES + "?since=1428613681")
     .then((res) => {
-      console.log(res);
         return res.json();
     }).then((json) => {
       var barData = [];
       _.forEach(json, (data) => {
         barData.push(data);
       });
-      console.log(barData);
       this.setState({
         data: barData
       });
