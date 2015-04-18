@@ -1,6 +1,6 @@
 .DS_Store
 *.db
+*.pyc
 
 node_modules/
 build/
-*.pyc
