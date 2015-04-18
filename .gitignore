@@ -1,10 +1,6 @@
-data.db
-
-### OSX ###
 .DS_Store
-.AppleDouble
-.LSOverride
-Icon
+*.db
+
 node_modules/
 build/
 *.pyc
