@@ -1,0 +1,66 @@
+@timeframe-height: 40px;
+@bar-column-bg: #f3f3f3;
+@bar-column-color: mediumturquoise;
+
+.stats {
+  .stretch();
+
+  display: flex;
+  width: 100%;
+  padding: 20px;
+
+  .bar {
+    display: flex;
+    background: @bar-column-bg;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    flex-direction: row-reverse;
+    margin: 0 10px;
+
+    &.bar-with-no-value {
+      .value {
+        color: @primary-black;
+        background: transparent;
+      }
+    }
+
+    .bar-column {
+      .stretch();
+
+      bottom: @timeframe-height;
+    }
+
+    .value {
+      display: block;
+      position: absolute;
+      background: @bar-column-color;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      color: white;
+      font-weight: 300;
+      font-size: 24px;
+    }
+
+    .date {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: @timeframe-height;
+      border-top: 2px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 12px;
+      width: 100%;
+      background: darken(@bar-column-bg, 5%);
+    }
+  }
+
+}
