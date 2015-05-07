@@ -11,7 +11,7 @@ import Navigation from "./components/navigation";
 
 // API URL's constants
 
-window.API_URL = "http://localhost:5000/api";
+window.API_URL = window.location.origin + "/api";
 window.STATUSES = window.API_URL + "/statuses/";
 window.TIMESERIES = window.API_URL + "/timeseries/";
 
@@ -34,7 +34,7 @@ let routes = (
   <Route handler={StressedApp} path="/">
     <DefaultRoute handler={Mood} />
     <Route handler={Mood} name="mood" path="mood" />
-    <Route handler={Stats} name="stats" />
+    <Route handler={Stats} name="stats" path="stats" />
     <NotFoundRoute handler={Mood}/>
   </Route>
 );

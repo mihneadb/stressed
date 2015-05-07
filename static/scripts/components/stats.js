@@ -10,7 +10,7 @@ let Stats = React.createClass({
   displayName: "Stats",
 
   statics: {
-    DATE_FORMAT: "Do MMMM YYYY"
+    DATE_FORMAT: "Do MMMM YY"
   },
 
   getInitialState() {
@@ -28,7 +28,11 @@ let Stats = React.createClass({
         1428710400: 32
       }
     */
-    fetch(window.TIMESERIES + "?since=1428613681")
+    const currentTime = Math.round(new Date().getTime() / 1000);
+    const oneWeek = 7 * 24 * 60 * 60;
+    const oneWeekSinceNow = currentTime - oneWeek;
+
+    fetch(window.TIMESERIES + "?since=" + oneWeekSinceNow)
     .then((res) => {
         return res.json();
     }).then((json) => {
@@ -72,7 +76,7 @@ let Stats = React.createClass({
           </div>
         </div>
         <div className="date">
-          {moment(data.timeframe).format(this.constructor.DATE_FORMAT)}
+          {moment.utc(data.timeframe, 'X').format(this.constructor.DATE_FORMAT)}
         </div>
       </div>;
     });
