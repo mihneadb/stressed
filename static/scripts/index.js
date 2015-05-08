@@ -32,14 +32,14 @@ let StressedApp = React.createClass({
 
 let routes = (
   <Route handler={StressedApp} path="/">
-    <DefaultRoute handler={Mood} />
-    <Route handler={Mood} name="mood" path="mood" />
-    <Route handler={Stats} name="stats" path="stats" />
+    <Route handler={Mood} name="mood" path="/mood" />
+    <Route handler={Stats} name="stats" path="/stats" />
     <NotFoundRoute handler={Mood}/>
+    <DefaultRoute handler={Mood} pageTitle="Home"/>
   </Route>
 );
 
 
-Router.run(routes, Router.HistoryLocation, function(Handler) {
-  React.render(<Handler />, document.getElementById("root"));
+Router.run(routes, function (Handler) {
+  React.render(<Handler/>, document.getElementById('root'));
 });
