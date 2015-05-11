@@ -1,0 +1,30 @@
+.stressed-content {
+  .stretch();
+
+  .mood-button {
+    .stretch();
+
+    &:not(.success):not(.loading) {
+      cursor: pointer;
+    }
+
+    background: transparent;
+    box-shadow: none;
+    border: 0 none;
+    width: 100%;
+    font-size: 200px;
+    color: @mood-bg;
+    transition: .3s background ease, .2s font-size ease;
+
+    &.success {
+      background: #BEC991;
+      color: #006C4C;
+    }
+
+    &.loading {
+      color: @loading-bg;
+      font-size: 50px;
+    }
+  }
+}
+
