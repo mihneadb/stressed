@@ -20,7 +20,7 @@ You can simply fire it up using:
 
 ```bash
 docker build -t stressed .
-docker run -v `pwd`:/opt/stressed -p 5000:80 -it stressed
+docker run -p 5000:80 -it stressed
 ```
 
 The server will be available on `127.0.0.1:5000`.
@@ -30,6 +30,9 @@ The server will be available on `127.0.0.1:5000`.
 Use the provided `requirements.txt` to install the deps and then you can either run
 the Flask development server using `python app.py` or start the app via `gunicorn`,
 using `gunicorn -k eventlet app:app`.
+
+Don't forget to build the JS as well - you can read everything about it in
+`static/README.md`.
 
 ## URLs
 
