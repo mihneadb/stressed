@@ -5,10 +5,11 @@ from sqlalchemy import desc
 from sqlalchemy.orm import sessionmaker
 from werkzeug.exceptions import BadRequest
 
+from constants import STATUS_CHOICES
 from db import engine
 from driver import (extract_since_until, apply_filters,
                     make_timeseries, RESOLUTIONS)
-from status import Status, STATUS_CHOICES
+from status import Status
 from utils import datetime_to_timestamp
 
 
@@ -73,7 +74,7 @@ def api_statuses_post_list():
     data = request.json
     if 'message' not in data or data['message'] not in STATUS_CHOICES:
         return BadRequest("Missing or invalid message field. "
-                          "Possible values: 'stressed', 'frustrated'.")
+                          "Possible values: %s." % STATUS_CHOICES)
 
     status = Status(message=data['message'])
     try:

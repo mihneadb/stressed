@@ -3,12 +3,11 @@ from datetime import datetime
 from sqlalchemy import Column, Integer, Enum, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 
+from constants import STATUS_CHOICES
 from utils import datetime_to_timestamp
 
 
 Base = declarative_base()
-
-STATUS_CHOICES = ('stressed', 'frustrated')
 
 
 class Status(Base):

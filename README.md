@@ -75,3 +75,9 @@ Example:
   "1428278400": 0
 }
 ```
+
+## Changing what to count
+
+The possible statuses are defined in `constants.py`. Feel free to change them
+and everything will keep working!
+
