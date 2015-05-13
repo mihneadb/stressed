@@ -36,7 +36,7 @@ Don't forget to build the JS as well - you can read everything about it in
 
 ## URLs
 
-`GET /` - home for frontend (TODO).
+`GET /` - home for frontend.
 
 `GET /api/statuses/` - list endpoint for status objects (supports filtering via `message`, `since` and `until`).
 
