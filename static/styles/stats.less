@@ -14,7 +14,7 @@
     align-items: center;
     position: relative;
     flex-direction: row-reverse;
-    margin: 0 @default-spacing;
+    margin: 0 @default-spacing / 2;
 
     &.bar-with-no-value {
       .value {
@@ -54,10 +54,17 @@
       align-items: center;
       justify-content: center;
       font-weight: 600;
-      font-size: 12px;
+      font-size: 10px;
       width: 100%;
+      line-height: 1em;
       background: darken(@bar-column-bg, 5%);
     }
+  }
+}
+
+@media (max-width: 550px) {
+  .stats {
+    flex-direction: column;
   }
 
 }
