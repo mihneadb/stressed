@@ -52,7 +52,7 @@
   align-items: center;
   position: relative;
   flex-direction: row-reverse;
-  margin: 0 10px;
+  margin: 0 5px;
 }
 .stats .bar.bar-with-no-value .value {
   color: #333333;
@@ -90,9 +90,15 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 10px;
   width: 100%;
+  line-height: 1em;
   background: #e6e6e6;
+}
+@media (max-width: 550px) {
+  .stats {
+    flex-direction: column;
+  }
 }
 .navigation {
   position: absolute;
