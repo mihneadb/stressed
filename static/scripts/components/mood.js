@@ -3,7 +3,7 @@
 import React from "react/addons";
 import fetch from "node-fetch";
 import Icon from "react-fa";
-import {classSet} from "react/addons"; // eslint-disable-line
+import classSet from "classnames";
 
 let Mood = React.createClass({
   displayName: "Mood",
@@ -19,7 +19,7 @@ let Mood = React.createClass({
     let isLoading = this.state.isLoading,
         isMoodSet = this.state.isMoodSet;
 
-    var buttonClasses = React.addons.classSet({
+    var buttonClasses = classSet({
       "mood-button": true,
       "loading": isLoading,
       "success": isMoodSet

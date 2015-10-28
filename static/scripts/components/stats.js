@@ -4,6 +4,7 @@ import React from "react";
 import _ from "lodash";
 import fetch from "node-fetch";
 import moment from "moment";
+import classSet from "classnames";
 
 
 let Stats = React.createClass({
@@ -59,17 +60,18 @@ let Stats = React.createClass({
   },
 
   renderBarColumn() {
-    return _.map(this.state.data, (data) => {
+    return _.map(this.state.data, (data, index) => {
       let barHeight = Math.round(data.value / this.state.maxValue * 100) + "%";
       let style = {
         height: data.value === 0 ? "100%" : barHeight
       };
-      let barClasses = React.addons.classSet({
+      let barClasses = classSet({
         "bar": true,
         "bar-with-no-value": data.value === 0
       });
 
-      return <div className={barClasses}>
+      return <div key={index}
+                  className={barClasses}>
         <div className="bar-column">
           <div className="value" style={style}>
             <span>{data.value}</span>
