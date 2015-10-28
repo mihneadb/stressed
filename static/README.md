@@ -7,8 +7,8 @@
 
 __DEVELOPMENT__
 
-`npm run-script watch`
+`npm run watch`
 
 __PRODUCTION__
 
-`npm run-script build`
+`npm run build`
