@@ -1,0 +1,11 @@
+Flask==0.10.1
+Jinja2==2.7.3
+MarkupSafe==0.23
+SQLAlchemy==0.9.9
+Werkzeug==0.10.4
+argparse==1.2.1
+eventlet==0.17.2
+greenlet==0.4.5
+gunicorn==19.3.0
+itsdangerous==0.24
+wsgiref==0.1.2

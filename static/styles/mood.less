@@ -1,0 +1,54 @@
+.moodmeter-content {
+
+  .mood-button-left {
+    .stretch-left();
+
+    &:not(.success):not(.loading) {
+      cursor: pointer;
+    }
+
+    background: #DADADA;
+    box-shadow: none;
+    border: 0 none;
+    width: 50%;
+    font-size: 200px;
+    color: @mood-bg-stressed;
+    transition: .3s background ease, .2s font-size ease;
+
+    &.success {
+      background: @success-bg;
+      color: #006C4C;
+    }
+
+    &.loading {
+      color: @loading-bg;
+      font-size: 50px;
+    }
+  }
+
+  .mood-button-right {
+    .stretch-right();
+
+    &:not(.success):not(.loading) {
+      cursor: pointer;
+    }
+
+    background: #DADADA;
+    box-shadow: none;
+    border: 0 none;
+    width: 50%;
+    font-size: 200px;
+    color: @mood-bg-happy;
+    transition: .3s background ease, .2s font-size ease;
+
+    &.success {
+      background: @success-bg;
+      color: #006C4C;
+    }
+
+    &.loading {
+      color: @loading-bg;
+      font-size: 50px;
+    }
+  }
+}
