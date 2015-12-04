@@ -10,14 +10,20 @@ let Mood = React.createClass({
 
   getInitialState() {
     return {
+<<<<<<< HEAD
       isLoading_l: false,
       isMoodSet_r: false,
       isLoading_r: false,
       isMoodSet_r: false
+=======
+      isLoading: false,
+      isMoodSet: false
+>>>>>>> a246be034873584e93e14f33fd910655d58fab21
     };
   },
 
   render() {
+<<<<<<< HEAD
     let isLoading_l = this.state.isLoading_l,
         isMoodSet_l = this.state.isMoodSet_l,
         isLoading_r = this.state.isLoading_r,
@@ -56,6 +62,31 @@ let Mood = React.createClass({
   setStatus_l() {
     // Replace button state
     this.setState({isLoading_l: true});
+=======
+    let isLoading = this.state.isLoading,
+        isMoodSet = this.state.isMoodSet;
+
+    var buttonClasses = classSet({
+      "mood-button": true,
+      "loading": isLoading,
+      "success": isMoodSet
+    });
+
+    return <div className="mood stressed-content">
+      <button className={buttonClasses}
+            disabled={isLoading || isMoodSet}
+            onClick={!isLoading ? this.setStatus : null}>
+        {isLoading ? <Icon spin name="circle-o-notch" />
+                   : isMoodSet ? <Icon name="check" />
+                               : <Icon name="meh-o" />}
+      </button>
+    </div>
+  },
+
+  setStatus() {
+    // Replace button state
+    this.setState({isLoading: true});
+>>>>>>> a246be034873584e93e14f33fd910655d58fab21
 
     let moodMessage = { message: "stressed" };
 
@@ -70,6 +101,7 @@ let Mood = React.createClass({
 
         // Completed of async action, set loading state back
         this.setState({
+<<<<<<< HEAD
           isLoading_l: false,
           isMoodSet_l: true
         });
@@ -96,6 +128,10 @@ let Mood = React.createClass({
         this.setState({
           isLoading_r: false,
           isMoodSet_r: true
+=======
+          isLoading: false,
+          isMoodSet: true
+>>>>>>> a246be034873584e93e14f33fd910655d58fab21
         });
       }, 2000);
     });

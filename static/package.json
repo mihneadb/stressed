@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "MoodMeterApp",
+=======
+  "name": "StressedApp",
+>>>>>>> a246be034873584e93e14f33fd910655d58fab21
   "version": "0.0.1",
   "description": "For stressed people",
   "scripts": {
@@ -23,7 +27,11 @@
   ],
   "author": "XXX",
   "license": "MIT",
+<<<<<<< HEAD
   "homepage": "http://mood-meter-app.herokuapp.com/",
+=======
+  "homepage": "http://stressed-app.herokuapp.com/",
+>>>>>>> a246be034873584e93e14f33fd910655d58fab21
   "devDependencies": {
     "babel-core": "^4.7.4",
     "babel-loader": "^4.1.0",
