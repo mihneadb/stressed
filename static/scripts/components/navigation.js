@@ -11,7 +11,11 @@ let Navigation = React.createClass({
       <li>
         <Link to="mood"
               bsStyle="link"
+<<<<<<< HEAD
+              className="mood-button"><Icon name="home" /></Link>
+=======
               className="mood-button"><Icon name="meh-o" /></Link>
+>>>>>>> a246be034873584e93e14f33fd910655d58fab21
       </li>
       <li>
         <Link to="stats"

@@ -1,6 +1,0 @@
-*.db
-*.pyc
-
-.DS_Store
-node_modules/
-static/build

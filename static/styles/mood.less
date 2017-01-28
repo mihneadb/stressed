@@ -1,13 +1,58 @@
+<<<<<<< HEAD
+.moodmeter-content {
+
+  .mood-button-left {
+    .stretch-left();
+=======
 .stressed-content {
   .stretch();
 
   .mood-button {
     .stretch();
+>>>>>>> a246be034873584e93e14f33fd910655d58fab21
 
     &:not(.success):not(.loading) {
       cursor: pointer;
     }
 
+<<<<<<< HEAD
+    background: #DADADA;
+    box-shadow: none;
+    border: 0 none;
+    width: 50%;
+    font-size: 200px;
+    color: @mood-bg-stressed;
+    transition: .3s background ease, .2s font-size ease;
+
+    &.success {
+      background: @success-bg;
+      color: #006C4C;
+    }
+
+    &.loading {
+      color: @loading-bg;
+      font-size: 50px;
+    }
+  }
+
+  .mood-button-right {
+    .stretch-right();
+
+    &:not(.success):not(.loading) {
+      cursor: pointer;
+    }
+
+    background: #DADADA;
+    box-shadow: none;
+    border: 0 none;
+    width: 50%;
+    font-size: 200px;
+    color: @mood-bg-happy;
+    transition: .3s background ease, .2s font-size ease;
+
+    &.success {
+      background: @success-bg;
+=======
     background: transparent;
     box-shadow: none;
     border: 0 none;
@@ -18,6 +63,7 @@
 
     &.success {
       background: #BEC991;
+>>>>>>> a246be034873584e93e14f33fd910655d58fab21
       color: #006C4C;
     }
 
@@ -27,4 +73,7 @@
     }
   }
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> a246be034873584e93e14f33fd910655d58fab21

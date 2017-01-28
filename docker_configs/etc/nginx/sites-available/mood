@@ -16,9 +16,8 @@ server {
     }
 
     location / {
-        root /opt/stressed/static/;
+        root /opt/mood-meter/static/;
         index index.html;
         autoindex on;
     }
 }
-
